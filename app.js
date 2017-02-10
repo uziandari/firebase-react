@@ -6,5 +6,11 @@ import store from './src/store/store';
 import './src/styles/main.scss';
 
 
+const main = (
+  <Provider store={store}>
+    <InviteContainer />
+  </Provider>
+);
+
 ReactDom.render(main,
   document.getElementById('container'));

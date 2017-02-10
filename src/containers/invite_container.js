@@ -9,9 +9,14 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    onGetInvite: () => dispatch(onGetInvite()),
   };
 }
 
 const inviteContainer = connect(mapStateToProps, mapDispatchToProps)(Invite);
+
+componentDidMount() {
+  this.props.onGetInvite();
+}
 
 export default inviteContainer;
